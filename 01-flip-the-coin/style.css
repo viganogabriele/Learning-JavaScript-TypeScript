@@ -33,11 +33,19 @@ body {
 	width: 300px;
 	height: auto;
 	margin-bottom: 50px;
+	cursor: pointer;
 }
 
 .text-result {
 	font-size: 20px;
+}
+
+.result-container {
+	height: 30px;
 	margin-bottom: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .btn--toss {
