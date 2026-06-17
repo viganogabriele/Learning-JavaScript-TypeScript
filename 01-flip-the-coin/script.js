@@ -8,14 +8,26 @@ const createScoreTracker = () => {
 
 	const headsDisplay = document.querySelector("#heads-score");
 	const tailsDisplay = document.querySelector("#tails-score");
+	const iconHead = document.querySelector(".score-board__icon--head");
+	const iconTail = document.querySelector(".score-board__icon--tail");
 
 	return (result) => {
 		if (result === "Head") {
 			heads++;
 			if (headsDisplay) headsDisplay.textContent = heads;
+			if (iconHead) {
+				iconHead.classList.remove("animation-icon");
+				void iconHead.offsetWidth;
+				iconHead.classList.add("animation-icon");
+			}
 		} else {
 			tails++;
 			if (tailsDisplay) tailsDisplay.textContent = tails;
+			if (iconTail) {
+				iconTail.classList.remove("animation-icon");
+				void iconTail.offsetWidth;
+				iconTail.classList.add("animation-icon");
+			}
 		}
 	};
 };

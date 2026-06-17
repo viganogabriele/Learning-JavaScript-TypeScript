@@ -15,9 +15,15 @@
 <body>
   <h1 class="title">Flip the coin</h1>
   <h2 class="subtitle">Press the coin or the button to flip the coin</h2>
-  <div class="score-container">
-    <p>Heads: <span id="heads-score">0</span></p>
-    <p>Tails: <span id="tails-score">0</span></p>
+  <div class="score-board">
+    <div class="score-board__item">
+      <img class="score-board__icon score-board__icon--head" src="assets/coin-head.png" alt="Head icon">
+      <p class="score-board__text">Heads: <span id="heads-score">0</span></p>
+    </div>
+    <div class="score-board__item">
+      <img class="score-board__icon score-board__icon--tail" src="assets/coin-tail.png" alt="Tail icon">
+      <p class="score-board__text">Tails: <span id="tails-score">0</span></p>
+    </div>
   </div>
   <img class="img--toss" src="assets/toss.png" alt="Coin showing toss illustration">
 

@@ -27,7 +27,7 @@ body {
 	font-size: 22px;
 	color: rgb(122, 122, 122);
 	font-weight: 600;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 	text-align: center;
 }
 
@@ -36,6 +36,27 @@ body {
 	height: auto;
 	margin-bottom: 50px;
 	cursor: pointer;
+}
+
+.score-board {
+	display: flex;
+	gap: 30px;
+	margin-bottom: 40px;
+}
+
+.score-board__item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.score-board__icon {
+	width: 25px;
+	height: auto;
+}
+
+.score-board__text {
+	color: rgb(122, 122, 122);
 }
 
 .text-result {
@@ -84,6 +105,28 @@ body {
 
 .animation-toss {
 	animation: rotateCoin 0.4s ease-out;
+}
+
+@keyframes popIcon {
+	0% {
+		transform: scale(1) translateY(0);
+	}
+	30% {
+		transform: scale(1.2) translateY(-6px);
+	}
+	50% {
+		transform: scale(1.2) rotate(15deg) translateY(-6px);
+	}
+	70% {
+		transform: scale(1.2) rotate(-15deg) translateY(-6px);
+	}
+	100% {
+		transform: scale(1) rotate(0deg) translateY(0);
+	}
+}
+
+.animation-icon {
+	animation: popIcon 0.3s ease-out;
 }
 
 @media (max-width: 480px) {
