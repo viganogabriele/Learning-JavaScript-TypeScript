@@ -39,7 +39,8 @@ body {
   font-size: 48px;
   font-weight: 700;
   line-height: 65px;
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
   margin-top: 100px;
   /* Apply the gradient background */
   background: linear-gradient(90deg, #b6fafd 0%, #21a5ac 100%);
@@ -90,14 +91,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 80px;
   gap: 50px;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .faq-item {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 25px;
 }
 
 .faq-item__question {
@@ -134,6 +138,11 @@ body {
   width: 20px;
   height: auto;
   filter: brightness(0) invert(1);
+}
+
+.faq-item--active .faq-item__icon {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }
 
 .faq-panel {
