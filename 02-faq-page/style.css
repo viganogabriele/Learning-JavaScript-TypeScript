@@ -96,11 +96,11 @@ body {
   gap: 50px;
   width: 100%;
   padding: 0 20px;
+  margin-bottom: 40px;
 }
 
 .faq-item {
   width: 100%;
-  max-width: 1000px;
   overflow: hidden;
   border-radius: 25px;
 }
@@ -113,6 +113,7 @@ body {
   padding: 30px 40px 30px;
   color: var(--text-primary);
   border: none;
+  outline: none;
   font-size: 20px;
   cursor: pointer;
   transition:
@@ -150,6 +151,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .faq-panel:not(.faq-panel--active) {
