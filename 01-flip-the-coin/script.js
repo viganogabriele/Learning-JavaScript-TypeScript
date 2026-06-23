@@ -17,16 +17,14 @@ const createScoreTracker = () => {
       if (headsDisplay) headsDisplay.textContent = heads;
       if (iconHead) {
         iconHead.classList.remove("animation-icon");
-        void iconHead.offsetWidth;
-        iconHead.classList.add("animation-icon");
+        setTimeout(() => iconHead.classList.add("animation-icon"), 0);
       }
     } else {
       tails++;
       if (tailsDisplay) tailsDisplay.textContent = tails;
       if (iconTail) {
         iconTail.classList.remove("animation-icon");
-        void iconTail.offsetWidth;
-        iconTail.classList.add("animation-icon");
+        setTimeout(() => iconTail.classList.add("animation-icon"), 0);
       }
     }
   };
@@ -36,9 +34,7 @@ const updateScore = createScoreTracker();
 
 btnToss.addEventListener("click", () => {
   imgToss.classList.remove("animation-toss");
-  void imgToss.offsetWidth;
-  imgToss.classList.add("animation-toss");
-
+  setTimeout(() => imgToss.classList.add("animation-toss"), 0);
   // Calculate the result
   let random = Math.random() < 0.5 ? "Head" : "Tail";
 
