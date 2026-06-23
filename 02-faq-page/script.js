@@ -21,8 +21,6 @@ filterButtons.forEach((button) => {
 
     document.querySelector(`#${targetID}`).classList.add("faq-panel--active");
 
-    // Clean openedFaqs before switching filter
-
     initPanelFaqs(targetID);
   });
 });
@@ -51,7 +49,14 @@ faqQuestion.forEach((button) => {
 });
 
 function initPanelFaqs(panelID) {
-  openedFaqs = [];
+  const currentPanel = document.querySelector(`#${panelID}`);
+
+  const panelFaqs = currentPanel.querySelectorAll(".faq-item");
+  openedFaqs = Array.from(panelFaqs).slice(0, MAX_OPENED);
+
+  openedFaqs.forEach((faq) => {
+    faq.classList.add("faq-item--active");
+  });
 }
 
 // Initialize openedFaqs and faq-item to show
