@@ -11,7 +11,172 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" />
+    <script src="script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <form class="form">
+      <section class="step step--active" id="step-register">
+        <h1 class="step__title">Register</h1>
+
+        <div class="step__field">
+          <label for="user-name" class="step__label">Name</label>
+          <input
+            type="text"
+            id="user-name"
+            class="step__input"
+            placeholder="Your Name"
+            required
+          />
+        </div>
+
+        <div class="step__field">
+          <label for="user-email" class="step__label">Email</label>
+          <input
+            type="email"
+            id="user-email"
+            class="step__input"
+            placeholder="youremail@mail.com"
+            required
+          />
+        </div>
+
+        <button type="button" class="step__btn-next">Continue</button>
+      </section>
+
+      <section class="step" id="step-topics">
+        <h1 class="step__title">Which topics are you interested in?</h1>
+
+        <div class="step__choices">
+          <input
+            type="radio"
+            id="topic-sw"
+            name="topic"
+            value="software-development"
+            class="step__radio"
+          />
+          <label for="topic-sw" class="step__choice-label"
+            >Software Development</label
+          >
+
+          <input
+            type="radio"
+            id="topic-ux"
+            name="topic"
+            value="user-experience"
+            class="step__radio"
+          />
+          <label for="topic-ux" class="step__choice-label"
+            >User Experience</label
+          >
+
+          <input
+            type="radio"
+            id="topic-design"
+            name="topic"
+            value="graphic-design"
+            class="step__radio"
+          />
+          <label for="topic-design" class="step__choice-label"
+            >Graphic Design</label
+          >
+        </div>
+
+        <button type="button" class="step__btn-next">Continue</button>
+      </section>
+
+      <section class="step" data-target="software-development">
+        <h1 class="step__title">
+          Which newsletter do you want to subscribe to?
+        </h1>
+        <div class="step__choices">
+          <input
+            type="radio"
+            id="nl-react"
+            name="newsletter"
+            value="react-weekly"
+            class="step__radio"
+          />
+          <label for="nl-react" class="step__choice-label">React Weekly</label>
+
+          <input
+            type="radio"
+            id="nl-node"
+            name="newsletter"
+            value="node-daily"
+            class="step__radio"
+          />
+          <label for="nl-node" class="step__choice-label">Node.js Daily</label>
+        </div>
+        <button type="submit" class="step__btn-submit">Submit</button>
+      </section>
+
+      <section class="step" data-target="user-experience">
+        <h1 class="step__title">
+          Which newsletter do you want to subscribe to?
+        </h1>
+        <div class="step__choices">
+          <input
+            type="radio"
+            id="nl-nng"
+            name="newsletter"
+            value="nng-group"
+            class="step__radio"
+          />
+          <label for="nl-nng" class="step__choice-label">NN/g Insights</label>
+
+          <input
+            type="radio"
+            id="nl-uxplanet"
+            name="newsletter"
+            value="ux-planet"
+            class="step__radio"
+          />
+          <label for="nl-uxplanet" class="step__choice-label">UX Planet</label>
+        </div>
+        <button type="submit" class="step__btn-submit">Submit</button>
+      </section>
+
+      <section class="step" data-target="graphic-design">
+        <h1 class="step__title">
+          Which newsletter do you want to subscribe to?
+        </h1>
+        <div class="step__choices">
+          <input
+            type="radio"
+            id="nl-behance"
+            name="newsletter"
+            value="behance-trends"
+            class="step__radio"
+          />
+          <label for="nl-behance" class="step__choice-label"
+            >Behance Trends</label
+          >
+
+          <input
+            type="radio"
+            id="nl-awwwards"
+            name="newsletter"
+            value="awwwards-daily"
+            class="step__radio"
+          />
+          <label for="nl-awwwards" class="step__choice-label"
+            >Awwwards Daily</label
+          >
+        </div>
+        <button type="submit" class="step__btn-submit">Submit</button>
+      </section>
+    </form>
+
+    <div class="step-counter">
+      <p class="step-counter__text">
+        Step <span class="step-counter__current">1</span> of
+        <span class="step-counter__total">3</span>
+      </p>
+      <div class="step-counter__dots">
+        <span class="step-counter__dot step-counter__dot--active"></span>
+        <span class="step-counter__dot"></span>
+        <span class="step-counter__dot"></span>
+      </div>
+    </div>
+  </body>
 </html>
