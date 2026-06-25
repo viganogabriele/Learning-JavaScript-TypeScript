@@ -23,6 +23,7 @@
           <input
             type="text"
             id="user-name"
+            name="name"
             class="step__input"
             placeholder="Your Name"
             required
@@ -34,6 +35,7 @@
           <input
             type="email"
             id="user-email"
+            name="email"
             class="step__input"
             placeholder="youremail@mail.com"
             required
@@ -53,6 +55,7 @@
             name="topic"
             value="software-development"
             class="step__radio"
+            required
           />
           <label for="topic-sw" class="step__choice-label"
             >Software Development</label
@@ -90,22 +93,31 @@
         </h1>
         <div class="step__choices">
           <input
-            type="radio"
+            type="checkbox"
             id="nl-react"
-            name="newsletter"
+            name="newsletter[]"
             value="react-weekly"
-            class="step__radio"
+            class="step__checkbox"
           />
           <label for="nl-react" class="step__choice-label">React Weekly</label>
 
           <input
-            type="radio"
+            type="checkbox"
             id="nl-node"
-            name="newsletter"
+            name="newsletter[]"
             value="node-daily"
-            class="step__radio"
+            class="step__checkbox"
           />
           <label for="nl-node" class="step__choice-label">Node.js Daily</label>
+
+          <input
+            type="checkbox"
+            id="nl-css"
+            name="newsletter[]"
+            value="css-tricks"
+            class="step__checkbox"
+          />
+          <label for="nl-css" class="step__choice-label">CSS Tricks</label>
         </div>
         <button type="submit" class="step__btn-submit">Submit</button>
       </section>
@@ -116,22 +128,33 @@
         </h1>
         <div class="step__choices">
           <input
-            type="radio"
+            type="checkbox"
             id="nl-nng"
-            name="newsletter"
+            name="newsletter[]"
             value="nng-group"
-            class="step__radio"
+            class="step__checkbox"
           />
           <label for="nl-nng" class="step__choice-label">NN/g Insights</label>
 
           <input
-            type="radio"
+            type="checkbox"
             id="nl-uxplanet"
-            name="newsletter"
+            name="newsletter[]"
             value="ux-planet"
-            class="step__radio"
+            class="step__checkbox"
           />
           <label for="nl-uxplanet" class="step__choice-label">UX Planet</label>
+
+          <input
+            type="checkbox"
+            id="nl-smashing"
+            name="newsletter[]"
+            value="smashing-mag"
+            class="step__checkbox"
+          />
+          <label for="nl-smashing" class="step__choice-label"
+            >Smashing Magazine</label
+          >
         </div>
         <button type="submit" class="step__btn-submit">Submit</button>
       </section>
@@ -142,25 +165,36 @@
         </h1>
         <div class="step__choices">
           <input
-            type="radio"
+            type="checkbox"
             id="nl-behance"
-            name="newsletter"
+            name="newsletter[]"
             value="behance-trends"
-            class="step__radio"
+            class="step__checkbox"
           />
           <label for="nl-behance" class="step__choice-label"
             >Behance Trends</label
           >
 
           <input
-            type="radio"
+            type="checkbox"
             id="nl-awwwards"
-            name="newsletter"
+            name="newsletter[]"
             value="awwwards-daily"
-            class="step__radio"
+            class="step__checkbox"
           />
           <label for="nl-awwwards" class="step__choice-label"
             >Awwwards Daily</label
+          >
+
+          <input
+            type="checkbox"
+            id="nl-dribbble"
+            name="newsletter[]"
+            value="dribbble-digest"
+            class="step__checkbox"
+          />
+          <label for="nl-dribbble" class="step__choice-label"
+            >Dribbble Digest</label
           >
         </div>
         <button type="submit" class="step__btn-submit">Submit</button>
