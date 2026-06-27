@@ -24,17 +24,18 @@ body {
 	height: 100dvh;
 	color: var(--text-main);
 	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .form-wrapper {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 20px;
+	width: 100%;
+	max-width: 460px;
 }
 
 .form {
@@ -131,7 +132,7 @@ body {
 .step-counter {
 	display: flex;
 	align-items: center;
-	padding-left: 20px;
+	padding-left: 15px;
 	gap: 16px;
 }
 
@@ -158,23 +159,14 @@ body {
 
 @media (max-width: 500px) {
 	.form-wrapper {
-		position: static;
-		transform: none;
-		margin: auto;
-		width: 100%;
 		padding: 0 20px;
+	}
+	.form {
+		width: 100%;
+		max-width: 100%;
+	}
 
-		.form {
-			width: 100%;
-			max-width: 100%;
-		}
-
-		.step {
-			padding: 40px 35px 0 35px;
-		}
-
-		.step-counter {
-			padding-left: 10px;
-		}
+	.step {
+		padding: 40px 35px;
 	}
 }
