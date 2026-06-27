@@ -121,6 +121,7 @@ body {
 	padding: 10px 20px;
 	max-width: 200px;
 	margin-top: 20px;
+	cursor: pointer;
 }
 
 .step__btn-next:hover {
@@ -128,6 +129,41 @@ body {
 	box-shadow: 0 0 0 2px var(--accent-glow);
 	transform: translateY(-1px);
 }
+
+.step__choices {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	width: 100%;
+}
+
+.step__radio {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.step__choice-label {
+	display: block;
+	width: 100%;
+	padding: 14px 20px;
+	background-color: var(--bg-input);
+	border: 1px solid var(--border-default);
+	border-radius: 8px;
+	color: var(--text-main);
+	font-size: 15px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.25s ease;
+}
+
+.step__choice-label:hover {
+	border-color: var(--accent);
+	background-color: rgba(124, 58, 237, 0.05);
+}
+
+/* STEP COUNTER */
 
 .step-counter {
 	display: flex;
@@ -156,6 +192,8 @@ body {
 	background-color: var(--accent);
 	transform: scale(1.2);
 }
+
+/* MEDIA QUERY */
 
 @media (max-width: 500px) {
 	.form-wrapper {
