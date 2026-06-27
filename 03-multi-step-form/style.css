@@ -21,8 +21,9 @@
 body {
 	background-color: var(--bg-main);
 	font-family: "Montserrat", sans-serif;
-	height: 100vh;
+	height: 100dvh;
 	color: var(--text-main);
+	overflow: hidden;
 }
 
 .form-wrapper {
@@ -153,4 +154,27 @@ body {
 .step-counter__dot--active {
 	background-color: var(--accent);
 	transform: scale(1.2);
+}
+
+@media (max-width: 500px) {
+	.form-wrapper {
+		position: static;
+		transform: none;
+		margin: auto;
+		width: 100%;
+		padding: 0 20px;
+
+		.form {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.step {
+			padding: 40px 35px 0 35px;
+		}
+
+		.step-counter {
+			padding-left: 10px;
+		}
+	}
 }
