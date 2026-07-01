@@ -25,15 +25,22 @@
         </div>
 
         <div class="step__field">
+          <label for="user-surname" class="step__label">Surname</label>
+          <input type="text" id="user-surname" name="surname" class="step__input" placeholder="Your Surname" required />
+        </div>
+
+        <div class="step__field">
           <label for="user-email" class="step__label">Email</label>
           <input type="email" id="user-email" name="email" class="step__input" placeholder="youremail@mail.com"
             required />
         </div>
 
-        <button type="button" class="step__btn-next">Continue</button>
+        <div class="step__actions">
+          <button type="button" class="step__btn-next">Continue</button>
+        </div>
       </section>
 
-      <section class="step " id="step-topics">
+      <section class="step" id="step-topics">
         <h1 class="step__title">Which topics are you interested in?</h1>
 
         <div class="step__choices">
@@ -47,10 +54,13 @@
           <label for="topic-design" class="step__choice-label">Graphic Design</label>
         </div>
 
-        <button type="button" class="step__btn-next">Continue</button>
+        <div class="step__actions">
+          <button type="button" class="step__btn-back">Back</button>
+          <button type="submit" class="step__btn-next">Submit</button>
+        </div>
       </section>
 
-      <section class="step " data-target="software-development">
+      <section class="step" data-target="software-development">
         <h1 class="step__title">
           Which newsletter do you want to subscribe to?
         </h1>
@@ -64,10 +74,13 @@
           <input type="checkbox" id="nl-css" name="newsletter[]" value="css-tricks" class="step__checkbox" />
           <label for="nl-css" class="step__choice-label">CSS Tricks</label>
         </div>
-        <button type="submit" class="step__btn-submit">Submit</button>
+        <div class="step__actions">
+          <button type="button" class="step__btn-back">Back</button>
+          <button type="submit" class="step__btn-submit">Submit</button>
+        </div>
       </section>
 
-      <section class="step" data-target="user-experience">
+      <section class="step " data-target="user-experience">
         <h1 class="step__title">
           Which newsletter do you want to subscribe to?
         </h1>
@@ -81,7 +94,10 @@
           <input type="checkbox" id="nl-smashing" name="newsletter[]" value="smashing-mag" class="step__checkbox" />
           <label for="nl-smashing" class="step__choice-label">Smashing Magazine</label>
         </div>
-        <button type="submit" class="step__btn-submit">Submit</button>
+        <div class="step__actions">
+          <button type="button" class="step__btn-back">Back</button>
+          <button type="submit" class="step__btn-submit">Submit</button>
+        </div>
       </section>
 
       <section class="step" data-target="graphic-design">
@@ -98,7 +114,10 @@
           <input type="checkbox" id="nl-dribbble" name="newsletter[]" value="dribbble-digest" class="step__checkbox" />
           <label for="nl-dribbble" class="step__choice-label">Dribbble Digest</label>
         </div>
-        <button type="submit" class="step__btn-submit">Submit</button>
+        <div class="step__actions">
+          <button type="button" class="step__btn-back">Back</button>
+          <button type="submit" class="step__btn-submit">Submit</button>
+        </div>
       </section>
     </form>
 
