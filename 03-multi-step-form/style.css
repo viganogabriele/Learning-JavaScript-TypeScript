@@ -144,6 +144,12 @@ body {
 	transform: translateY(-1px);
 }
 
+.step__btn-next:focus-visible,
+.step__btn-submit:focus-visible,
+.step__btn-back:focus-visible {
+	box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
 .step__btn-back {
 	background-color: var(--bg-input);
 	color: var(--text-muted);
