@@ -46,3 +46,30 @@ function getNewsletterStep(topic) {
 	}
 	return null;
 }
+
+function hasCheckedNewsletter(stepElemnt) {
+	
+}
+
+nextButtons.forEach((button) => {
+	button.addEventListener("click", () => {
+		const currentStep = steps[currentStepIndex];
+		const isValid = validateControls(currentStep);
+
+		if (!isValid) {
+			return;
+		}
+
+		if (currentStepIndex === 0) {
+			currentStepIndex++;
+			showStep(steps[currentStepIndex]);
+			return;
+		} else if (currentStepIndex === 1) {
+			selectedTopic = getSelectedTopic();
+			const newsletterStep = getNewsletterStep(selectedTopic);
+			if (newsletterStep === null) return;
+			currentStepIndex++;
+			showStep(newsletterStep);
+		}
+	});
+});
