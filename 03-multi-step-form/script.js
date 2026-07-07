@@ -37,3 +37,12 @@ function getSelectedTopic() {
 
 	return "";
 }
+
+function getNewsletterStep(topic) {
+	for (const newsletter of newsletterSteps) {
+		if (topic === newsletter.dataset.target) {
+			return newsletter;
+		}
+	}
+	return null;
+}
